@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> FURFUR </title>
+    <script>
+        onload = function () {
+            var d = document ;
+
+            function feedin (feed, speed) {
+                var filter = 0;
+                feed.style.opacity = 0;
+                feed.style.MozOpacity = 0;
+                var timer = setInterval(function () {
+                    filter ++;
+                    feed.style.opacity = (filter / 10);
+                    feed.style.MozOpacity = (filter / 10);
+                    if (filter == 10) {
+                        clearInterval(timer);
+                    }
+                },speed); 
+            }
+            // WORD
+            var str = [
+                [186,149,112,75,38],
+                [188,151,114,77,40,41,42,79,116,153,190,43,44,81,118,155,192],
+                [194,157,120,83,46],
+                [196,197,198,161,124,123,122,85,48,49,50],
+                [200,201,202,165,128,127,126,89,52,53,54],
+                [56,94,132,96,60,169,206],
+                [210,173,136,99,62,63,64,65,102,139,176,213,212,211],
+                [67,104,141,178,215,216,217,218,181,144,107,70],
+            ];
+
+            for (i=0;i<259;i++) {
+                            var box = d.createElement('div');
+                            with (d.body.appendChild(box).style) {
+                                if (i % 37 == 0) { clear = 'both'; }
+                                border = 'solid #259 1px';
+                                width = '20px';
+                                height = '20px';
+                                margin = '2px';
+                                float = 'left';
+                            }
+            }
+            var mess = d.getElementsByTagName('div');
+            var i = 0 , j = 0;
+            setInterval(function () {
+                feedin(mess[str[i][j]], 25);
+                mess[str[i][j]].style.background = '#F39'
+                j++;
+                if (i == str.length) { clearInterval(timer); }
+                if (j == str[i].length) { i++; j = 0; }
+            }, 50);
+        }                                       
+    </script>
+
+    <script>
+        function {var audio = new
+        Audio('https://untukmu.likeadream.repl.co/ResahHatiIniTanpanya.mp3');audio;
+    }
+        const swals = Swal.mixin({cancelButtonColor: '#909090', confirmButtonColor: '#2B2B2B', allowOutsideClick: false,});
+    </script>
+
+</head>
+<body>
+</body>
+</html>
